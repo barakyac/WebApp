@@ -31,6 +31,37 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
+1. Install Node.js and npm
+Ensure you have Node.js (at least v16.14.0 or later) and npm installed.
+Verify installation:
+bash
+Copy code
+node -v
+npm -v
+If not installed, download from Node.js official website.
+2. Install Angular CLI
+Make sure Angular CLI is installed globally:
+
+bash
+Copy code
+npm install -g @angular/cli@19
+Verify the installation:
+bash
+Copy code
+ng version
+3. Install Project Dependencies
+Navigate to your project folder:
+
+bash
+Copy code
+cd your-angular-project
+Install all required dependencies:
+
+bash
+Copy code
+npm install
+
+
 To start a local development server, run:
 
 ```bash

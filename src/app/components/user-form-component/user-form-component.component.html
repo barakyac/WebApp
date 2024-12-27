@@ -1,0 +1,23 @@
+<h2>Create New User</h2>
+<form (ngSubmit)="addUser(name, ID, Email, Password)">
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="name" name="name" required />
+  </label>
+  <br />
+  <label>
+    Email:
+    <input type="email" [(ngModel)]="Email" name="email" required pattern="^[^@]+@[^@]+\.[^@]+$"/>
+  </label>
+  <br />
+  <label>
+    Password:
+    <input type="password" [(ngModel)]="Password" name="password" required />
+  </label>
+  <label>
+    ID:
+    <input type="number" [(ngModel)]="ID" name="ID" required (blur)="validateID()"/>
+  </label>
+  <br />
+  <button type="submit">Create User</button>
+</form>

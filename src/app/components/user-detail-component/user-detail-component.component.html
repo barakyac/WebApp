@@ -1,0 +1,38 @@
+<h2>user-details by ID!</h2>
+<p *ngIf="isLoading">Loading user details...</p>
+
+<!-- קלט ID לחיפוש משתמש -->
+<label>
+    ID:
+    <input type="number" [(ngModel)]="ID" name="ID" required />
+  </label>
+  <button (click)="findUser(ID)">Find User</button>
+  
+  <!-- הצגת פרטי משתמש -->
+  <div *ngIf="isUser()">
+      <p> 
+          ID:
+          {{ID}}
+      </p>
+      <p>
+        Name:
+        {{Name}}
+      </p>
+      <p>
+        Email:
+        {{Email}}
+      </p>
+      <p>
+        Password:
+        <td>
+            <span *ngIf="!showPasswords">****</span>
+            <span *ngIf="showPasswords">{{ Password }}</span>
+          </td>
+          <td>
+            <button (click)="togglePasswordVisibility()">
+              {{ showPasswords ? 'Hide' : 'Show' }} Password
+            </button>
+          </td>
+      </p>
+  </div>
+

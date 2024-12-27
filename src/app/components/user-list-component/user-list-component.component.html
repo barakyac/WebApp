@@ -1,0 +1,31 @@
+<h2>User List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users | async">
+      <td>{{ user.ID }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.Email }}</td>
+      <td>
+        <span *ngIf="!showPasswords[user.ID]">****</span>
+        <span *ngIf="showPasswords[user.ID]">{{ user.Password }}</span>
+      </td>
+      <td>
+        <button (click)="togglePasswordVisibility(user.ID)">
+          {{ showPasswords[user.ID] ? 'Hide' : 'Show' }} Password
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="(users | async)?.length === 0">
+  No users available.
+</div>

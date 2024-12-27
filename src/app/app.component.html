@@ -1,0 +1,31 @@
+<h1>מערכת ניהול משתמשים</h1>
+
+
+<nav>
+    <a routerLink="/users">Users List</a>
+    <a routerLink="/users/new">  Add User</a>
+    <a routerLink='/users/:id'>  User Details</a>
+    <a routerLink='/users/edit/:id'>  Edit User</a>
+</nav>
+<router-outlet></router-outlet>
+
+
+
+
+
+<!--
+<app-user-form-component></app-user-form-component>
+<app-user-list-component></app-user-list-component>
+<app-user-form-edit></app-user-form-edit>
+<app-user-detail-component></app-user-detail-component>
+
+
+{ path: '', redirectTo: '/users/new', pathMatch: 'full' }, // דף ברירת מחדל
+    { path: 'users', component: UserListComponent },
+    { path: 'users/:id', component: UserDetailComponent },
+    { path: 'users/new', component: UserFormComponent },
+    { path: 'users/edit/:id', component: UserFormEditComponent },
+    { path: '**', redirectTo: '/users', pathMatch: 'full' } // ניתוב ברירת מחדל (404)
+
+
+    -->

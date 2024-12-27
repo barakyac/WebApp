@@ -1,0 +1,38 @@
+<h2 *ngIf="!isLoading">Edit User</h2>
+<p *ngIf="isLoading">Loading user details...</p>
+
+<!-- קלט ID לחיפוש משתמש -->
+<label>
+  ID:
+  <input type="number" [(ngModel)]="ID" name="ID" required />
+</label>
+<button (click)="findUser(ID)">Find User</button>
+
+<!-- טופס לעריכת המשתמש -->
+<div *ngIf="isUser()">
+  <form (ngSubmit)="EditUser(ID, Name, Email, Password)">
+    <p> 
+        ID:
+        {{ID}}
+    </p>
+    <label>
+      Name:
+      <input type="text" [(ngModel)]="Name" name="name" required />
+    </label>
+    <br />
+    <label>
+      Email:
+      <input type="email" [(ngModel)]="Email" name="email" required email/>
+    </label>
+    <br />
+    <label>
+      Password:
+      <input type="password" [(ngModel)]="Password" name="password" required />
+    </label>
+    <br />
+    <button type="submit">Update User</button>
+  </form>
+  <form (ngSubmit)="deleteUser(ID)">
+    <button type="submit">Delete User</button>
+  </form>
+</div>

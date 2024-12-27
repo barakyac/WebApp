@@ -1,4 +1,31 @@
+
+
 # WebApp
+
+
+## First Action
+
+JsonServer:
+
+Install JSON Server Globally:
+
+npm install -g json-server
+
+
+start JSON server (I used users_db.json from my project, can test with any simillar json file):
+
+json-server --watch users_db.json --port 3000
+
+
+Access Endpoints (I am using those from the client):
+
+1. List all users: http://localhost:3000/users
+2. Get a specific user: http://localhost:3000/users/1
+3. Add a new user (POST): http://localhost:3000/users
+4. Update a user (PUT): http://localhost:3000/users/1
+5. Delete a user (DELETE): http://localhost:3000/users/1
+
+   
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
@@ -54,24 +81,4 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
 
-JsonServer:
-
-Install JSON Server Globally:
-
-npm install -g json-server
-
-
-start JSON server (I used users_db.json from my project, can test with any simillar json file):
-
-json-server --watch users_db.json --port 3000
-
-
-Access Endpoints (I am using those from the client):
-
-1. List all users: http://localhost:3000/users
-2. Get a specific user: http://localhost:3000/users/1
-3. Add a new user (POST): http://localhost:3000/users
-4. Update a user (PUT): http://localhost:3000/users/1
-5. Delete a user (DELETE): http://localhost:3000/users/1
